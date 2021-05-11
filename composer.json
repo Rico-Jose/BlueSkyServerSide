@@ -6,5 +6,7 @@
             "email": "imbangjoserico@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "doctrine/dbal": "^3.1"
+    }
 }

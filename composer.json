@@ -6,6 +6,11 @@
             "email": "imbangjoserico@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    },
     "require": {
         "doctrine/dbal": "^3.1"
     }

@@ -17,4 +17,16 @@ class Dbh
         $conn = \Doctrine\DBAL\DriverManager::getConnection($params);
         return $conn;
     }
+
+    protected function fetch(string $sql)
+    {
+        $stmt = $this->connect()->prepare($sql);
+        $resultSet = $stmt->execute();
+        $categories = array();
+
+        while ($rows = $resultSet->fetchAllAssociative()) {
+            $categories = $rows;
+        }
+        return $categories;
+    }
 }

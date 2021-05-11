@@ -3,4 +3,7 @@
 require_once 'vendor/autoload.php';
 
 $category = new \app\core\Category();
-$category->addCategory('Category 4');
+$cats = $category->getCategory(2);
+foreach ($cats as $cat) {
+    echo $cat['name'];
+}

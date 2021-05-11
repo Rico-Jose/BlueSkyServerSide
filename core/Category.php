@@ -16,4 +16,11 @@ class Category extends Dbh
         }
         return $categories;
     }
+
+    public function addCategory(string $name)
+    {
+        $sql = "INSERT INTO categories (name) VALUES ('$name')";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute();
+    }
 }

@@ -13,7 +13,8 @@ class FetchCategoryCommand extends Command
     // Configure this command
     protected function configure()
     {
-        $this->setName('rc')
+        $this->setName('sc')
+             ->setHelp('Enter the command followed by the id of the category')
              ->setDescription('Select a category')
              ->addArgument('id', InputArgument::REQUIRED);
     }

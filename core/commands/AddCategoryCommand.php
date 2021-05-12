@@ -14,6 +14,7 @@ class AddCategoryCommand extends Command
     protected function configure()
     {
         $this->setName('ac')
+             ->setHelp('Enter the command followed by a category name')
              ->setDescription('Add a category')
              ->addArgument('name', InputArgument::REQUIRED);
     }

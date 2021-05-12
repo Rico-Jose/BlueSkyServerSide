@@ -13,7 +13,9 @@ class FetchCategoriesCommand extends Command
     // Configure this command
     protected function configure()
     {
-        $this->setName('gc')->setDescription('Show all categories');
+        $this->setName('gc')
+             ->setHelp('Enter the command')
+             ->setDescription('Show all categories');
     }
 
     // Execute this command
@@ -30,7 +32,7 @@ class FetchCategoriesCommand extends Command
             return Command::SUCCESS;
         }
 
-        $output->write('The categories table is empty');
+        $output->writeln('The categories table is empty');
             
         $output->writeln('');
         return Command::SUCCESS;

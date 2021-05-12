@@ -9,7 +9,7 @@ This PHP program is developed for BlueSky Digital Labs. It conforms to the FIG s
 
 The task is:
 
-<img src="images/task.jpg">
+<img src="images/task.png">
 
 Some useful links:
 
@@ -31,61 +31,55 @@ The sql query used for the program is saved in the folder as: bluesky.sql
   <tbody>
     <tr>
       <td>See the commands.</td>
-      <td><img src="images/1.jpg"></td>
+      <td><img src="images/1.png"></td>
     </tr>
   </tbody>
   <tbody>
     <tr>
       <td>Show all categories.</td>
-      <td><img src="images/2.jpg"></td>
+      <td><img src="images/2.png"></td>
     </tr>
   </tbody>
   <tbody>
     <tr>
       <td>Adding a category without including a name.</td>
-      <td><img src="images/3.jpg"></td>
+      <td><img src="images/3.png"></td>
     </tr>
   </tbody>
   <tbody>
     <tr>
       <td>Add a category.</td>
-      <td><img src="images/4.jpg"></td>
+      <td><img src="images/4.png"></td>
     </tr>
   </tbody>
   <tbody>
     <tr>
       <td>Add more categories.</td>
-      <td><img src="images/5.jpg"></td>
+      <td><img src="images/5.png"></td>
     </tr>
   </tbody>
   <tbody>
     <tr>
       <td>Select a category without including an id.</td>
-      <td><img src="images/6.jpg"></td>
+      <td><img src="images/6.png"></td>
     </tr>
   </tbody>
   <tbody>
     <tr>
       <td>Select a category.</td>
-      <td><img src="images/7.jpg"></td>
+      <td><img src="images/7.png"></td>
     </tr>
   </tbody>
   <tbody>
     <tr>
       <td>Select a category that does not exist.</td>
-      <td><img src="images/8.jpg"></td>
+      <td><img src="images/8.png"></td>
     </tr>
   </tbody>
   <tbody>
     <tr>
       <td>Show all categories.</td>
-      <td><img src="images/9.jpg"></td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td>To see the commands.</td>
-      <td><img src="images/1.jpg"></td>
+      <td><img src="images/9.png"></td>
     </tr>
   </tbody>
 </table>

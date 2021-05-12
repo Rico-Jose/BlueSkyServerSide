@@ -4,22 +4,27 @@ namespace app\core;
 
 class Category extends Dbh
 {
-    public function getAll()
+    private int $id;
+    private string $name;
+
+    public function __construct(string $name)
     {
-        $sql = "SELECT * FROM categories";
-        return $this->fetch($sql);
+        $this->name = $name;
+        $this->addCategory($this);
     }
 
-    public function getCategory(int $id)
+    public function setId(int $id): void
     {
-        $sql = "SELECT * FROM categories WHERE id = '$id'";
-        return $this->fetch($sql);
+        $this->id = $id;
     }
 
-    public function addCategory(string $name)
+    public function setName(string $name): void
     {
-        $sql = "INSERT INTO categories (name) VALUES ('$name')";
-        $stmt = $this->connect()->prepare($sql);
-        $stmt->execute();
+        $this->name = $name;
+    }
+
+    public function getName(): string
+    {
+        return $this->name;
     }
 }

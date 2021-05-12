@@ -4,7 +4,8 @@ namespace app\core;
 
 class Dbh
 {
-    protected function connect()
+    // Connect to the database
+    private function connect()
     {
         $params = array(
             'dbname' => 'bluesky',
@@ -13,14 +14,17 @@ class Dbh
             'host' => 'localhost',
             'driver' => 'pdo_mysql'
         );
-
+        
+        // Use Doctrine\DBAL\DriverManager class to get a DBAL connection
         $conn = \Doctrine\DBAL\DriverManager::getConnection($params);
         return $conn;
     }
-
-    protected function fetch(string $sql)
+    
+    // Fetch all categories
+    public static function fetchCategories()
     {
-        $stmt = $this->connect()->prepare($sql);
+        $sql = "SELECT * FROM categories";
+        $stmt = self::connect()->prepare($sql);
         $resultSet = $stmt->execute();
         $categories = array();
 
@@ -28,5 +32,24 @@ class Dbh
             $categories = $rows;
         }
         return $categories;
+    }
+
+    // Fetch a category using its id
+    public static function fetchCategory(int $id)
+    {
+        $sql = "SELECT * FROM categories WHERE id = '$id'";
+        $stmt = self::connect()->prepare($sql);
+        $resultSet = $stmt->execute();
+
+        return $category = $resultSet->fetchAssociative();
+    }
+
+    // Add a category
+    public function addCategory(Category $category)
+    {
+        $name = $category->getName();
+        $sql = "INSERT INTO categories (name) VALUES ('$name')";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute();
     }
 }
